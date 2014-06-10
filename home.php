@@ -22,7 +22,7 @@ get_header(); ?>
 
 		<div class="row">
 	      <div class="medium-6 large-6 medium-centered large-centered columns">
-	        <h3 class="subheader">Eu tenho ligação com Freixo e quero fazer parte da campanha.</h3>
+	        <h3 class="subheader">Eu quero fazer parte da campanha.</h3>
 	       </div>
 	    </div>
 
