@@ -21,6 +21,7 @@
 			<div class="medium-6 columns">
 				<div class="site-social">
 					<?php
+					/*
 		            // Social networks & RSS feed
 					$social = get_option( 'campanha_social_networks' );
 					if ( isset( $social ) && ! empty( $social ) ) :
@@ -31,7 +32,10 @@
 							endif;
 						endforeach;
 					endif;
+					*/
 					?>
+					<a class="social-link social-link-rss" href="<?php bloginfo( 'rss2_url' ); ?>"><span class="icon icon-rss">Twitter</span></a>
+					<a class="social-link social-link-rss" href="<?php bloginfo( 'rss2_url' ); ?>"><span class="icon icon-rss">Facebook</span></a>
 					<a class="social-link social-link-rss" href="<?php bloginfo( 'rss2_url' ); ?>"><span class="icon icon-rss"><abbr title="Really Simple Syndication">RSS</abbr></span></a>
 				</div><!-- .site-social -->
 			</div><!-- .medium-6 .columns -->
