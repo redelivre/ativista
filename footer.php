@@ -12,11 +12,29 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="row">
-			<div class="site-info">
-				<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'ativista' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'ativista' ), 'WordPress' ); ?></a>
-				<span class="sep"> | </span>
-				<?php printf( __( 'Theme: %1$s by %2$s.', 'ativista' ), 'Ativista', '<a href="http://ethymos.com.br" rel="designer">Ethymos</a>' ); ?>
-			</div><!-- .site-info -->
+			<div class="medium-6 columns">
+				<div class="site-info">
+					<a class="site-title" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+				</div><!-- .site-info -->
+			</div><!-- .medium-6 .columns -->
+			
+			<div class="medium-6 columns">
+				<div class="site-social">
+					<?php
+		            // Social networks & RSS feed
+					$social = get_option( 'campanha_social_networks' );
+					if ( isset( $social ) && ! empty( $social ) ) :
+						foreach ( $social as $key => $value ) :
+							if ( ! empty( $value) ) : ?>
+								<a class="social-link social-link-<?php echo $key; ?>" href="<?php echo esc_url( $value ); ?>"><span class="icon icon-<?php echo $key; ?>"><?php echo $key; ?></span></a>
+							<?php
+							endif;
+						endforeach;
+					endif;
+					?>
+					<a class="social-link social-link-rss" href="<?php bloginfo( 'rss2_url' ); ?>"><span class="icon icon-rss"><abbr title="Really Simple Syndication">RSS</abbr></span></a>
+				</div><!-- .site-social -->
+			</div><!-- .medium-6 .columns -->
 		</div><!-- .row -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->

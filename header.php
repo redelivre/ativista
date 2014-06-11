@@ -24,14 +24,14 @@
 
 	<header id="masthead" class="site-header" role="banner">
 		<div class="row">
-			<div class="medium-6 large-6 columns">
+			<div class="medium-6 columns">
 				<div class="site-branding">
 					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 					<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
 				</div>
 			</div>
 
-			<div class="medium-6 large-6 columns">
+			<div class="medium-6 columns">
 				<nav id="site-navigation" class="main-navigation" role="navigation">
 					<button class="menu-toggle"><?php _e( 'Primary Menu', 'ativista' ); ?></button>
 					<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
