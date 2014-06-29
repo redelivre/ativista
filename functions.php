@@ -40,6 +40,7 @@ function ativista_setup() {
 	 */
 	add_theme_support( 'post-thumbnails' );
 	add_image_size( 'archive', 362, 150, false );
+	add_image_size( 'featured-main', 1600, 550 );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
