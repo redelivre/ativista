@@ -7,7 +7,7 @@
 
 get_header(); ?>
 
-	<div class="medium-8 medium-centered columns">
+	<div class="medium-7 medium-centered columns">
 		<div id="primary" class="content-area">
 			<main id="main" class="site-main" role="main">
 
@@ -30,6 +30,6 @@ get_header(); ?>
 
 			</main><!-- #main -->
 		</div><!-- #primary -->
-	</div><!-- .medium-8 .medium-centered .columns -->
+	</div><!-- .medium-7 .medium-centered .columns -->
 
 <?php get_footer(); ?>

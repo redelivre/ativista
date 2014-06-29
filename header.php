@@ -52,35 +52,4 @@
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
-		<?php if ( is_front_page() ) : ?>
-		<div class="site-lead">
-	      <img src="http://placehold.it/1600x550/eeeeee/dddddd&text=Imagem" />
-
-	       <div class="row">
-		      <div class="medium-6 large-6 medium-centered large-right columns">
-		      	<div class="mc-form">
-			        <h3 class="subheader">Eu quero fazer parte da campanha.</h3>
-			        <form>
-			          	<div class="panel">
-							<label>
-							  <input type="text" placeholder="Email" />
-							</label>
-							<label>
-							  <input type="text" placeholder="Telefone" />
-							</label>
-							<label>
-							  <input type="text" placeholder="Bairro" />
-							</label>
-							<label>
-							  <input type="text" placeholder="Cidade" />
-							</label>
-							<a href="#" class="button secondary expand">Registrar</a>
-			          	</div>
-				    </form>
-				</div><!-- .mc-form -->
-		       </div>
-		    </div>
-	    </div>
-		<?php endif; ?>
-
-		<div class="row">
+		

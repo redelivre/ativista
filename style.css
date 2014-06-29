@@ -49,6 +49,10 @@ a:active {
 	color: midnightblue;
 }
 
+figure {
+	margin: 0;
+}
+
 .hidden {
 	position: absolute !important;
     height: 1px;
@@ -248,6 +252,10 @@ Basic structure
 	position: relative;
 }
 
+.row {
+	max-width: 1100px;
+}
+
 /*--------------------------------------------------------------
 Site header
 --------------------------------------------------------------*/
@@ -265,22 +273,21 @@ Site header
 }
 
 /*--------------------------------------------------------------
-Lead
+Content
 --------------------------------------------------------------*/
+
 .site-lead {
 	margin: -1.25em auto 1.25em;
 }
 
-.site-lead img {
-
+.home .hentry {
+	padding: 1em;
 }
-
-/*--------------------------------------------------------------
-Content
---------------------------------------------------------------*/
 
 .hentry {
 	margin-bottom: 2.5em;
+	position: relative;
+	z-index: 99;
 }
 
 .entry-header {
@@ -290,6 +297,21 @@ Content
 .entry-title {
 	font-size: 2em;
 	font-weight: bold;
+}
+
+.entry-image {
+	position: relative;
+}
+
+.entry-image-caption {
+	background: #000;
+	color: #fff;
+	font-size: 0.75em;
+	font-style: italic;
+	padding: 0.75rem;
+	position: absolute;
+		bottom: 0;
+		left: 0;
 }
 
 /* Shortcodes */
@@ -315,11 +337,8 @@ Content
 /*--------------------------------------------------------------
 Front Page
 --------------------------------------------------------------*/
-.mc-form {
-	background: #fff;
-	margin-top: -5em;
-	padding: 1.25em;
-
+.mc-form form {
+	margin-bottom: 0;
 }
 
 /*--------------------------------------------------------------
@@ -427,4 +446,14 @@ Footer
 
 .site-social {
 	text-align: right;
+}
+
+
+@media only screen and (min-width: 64.063em) {
+
+	.site-lead {
+		position: absolute;
+		z-index: 1;
+	}
+
 }
