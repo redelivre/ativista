@@ -27,6 +27,8 @@ get_header(); ?>
 						endif;
 					?>
 
+					<div class="fb-comments" data-href="<?php the_permalink(); ?>" data-numposts="5" data-colorscheme="light" data-width="100%"></div>
+
 				<?php endwhile; // end of the loop. ?>
 
 			</main><!-- #main -->

@@ -144,3 +144,22 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+/**
+ * Add Facebook scripts for the theme
+ *
+ * @todo Create an option page (or maybe in Customizer) to insert App ID
+ */
+function ativista_fb_scripts() {
+	?>
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&appId=181431738599219&version=v2.0";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+	<?php
+}
+add_action( 'wp_footer', 'ativista_fb_scripts' );
