@@ -26,8 +26,19 @@
 		<div class="row">
 			<div class="medium-6 columns">
 				<div class="site-branding">
-					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-					<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+					<?php
+				    // Check if there's a custom logo
+				    $logo = get_theme_mod( 'ativista_logo' );
+				    if ( isset( $logo ) && ! empty( $logo ) ) : ?>
+			            <a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+			                <img class="site-logo" src="<?php echo $logo; ?>" alt="Logo <?php bloginfo ( 'name' ); ?>" />
+			                <h1 class="site-title hidden"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+							<h2 class="site-description hidden"><?php bloginfo( 'description' ); ?></h2>
+			            </a>
+			        <?php else : ?>
+				        <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+						<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+				    <?php endif; ?>
 				</div>
 			</div>
 
