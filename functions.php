@@ -125,6 +125,11 @@ add_action( 'wp_enqueue_scripts', 'ativista_scripts' );
 require get_template_directory() . '/inc/template-tags.php';
 
 /**
+ * Custom shortcodes for this theme.
+ */
+require get_template_directory() . '/inc/shortcodes.php';
+
+/**
  * Custom functions that act independently of the theme templates.
  */
 require get_template_directory() . '/inc/extras.php';

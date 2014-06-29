@@ -278,6 +278,26 @@ Content
 	font-weight: bold;
 }
 
+/* Shortcodes */
+.text-box {
+	background: #fbfbfb;
+	border: 1px solid #ddd;
+	padding: 1em;
+}
+
+.content-button {
+	background: #999;
+	display: inline-block;
+	font-weight: bold;
+	margin-top: 1em;
+	padding: 0.5em 0.75em;
+}
+
+.content-button a {
+	color: #fff;
+	display: inline-block;
+}
+
 /*--------------------------------------------------------------
 Front Page
 --------------------------------------------------------------*/
