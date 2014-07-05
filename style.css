@@ -67,6 +67,7 @@ a {
 a:visited {
 	color: #e7642c;
 }
+
 a:hover,
 a:focus,
 a:active {
@@ -90,6 +91,7 @@ input[type="search"],
 textarea {
 	background-color: #efefe4;
 	border: 0;
+	box-shadow: none;
 }
 
 button,
@@ -170,7 +172,7 @@ input[type="submit"] {
 	clear: both;
 	display: block;
 	font-family: Montserrat, Helvetica, Arial, sans-serif;
-	float: left;
+	
 	text-align: right;
 	text-transform: uppercase;
 	width: 100%;
@@ -189,9 +191,11 @@ input[type="submit"] {
 	display: inline-block;
 	position: relative;
 }
+
 .main-navigation a {
 	background: #ffd01d;
 	display: inline-block;
+	font-size: 0.875em;
 	padding: 0.5em;
 	text-decoration: none;
 }
@@ -367,7 +371,7 @@ Basic structure
 Site header
 --------------------------------------------------------------*/
 .site-header {
-	
+	margin-bottom: 2.5em;
 }
 
 .site-header .site-title {
@@ -427,6 +431,12 @@ Content
 		left: 0;
 }
 
+.post-edit-link {
+	background: #efefe4;
+	font-size: 0.875em;
+	padding: 0.25em 0.5em;
+}
+
 /* Shortcodes */
 .text-box {
 	background: #ffd01d;
@@ -465,6 +475,7 @@ Front Page
 }
 
 .widget-title {
+	color: #008497;
 	font-size: 1.25em;
 }
 
@@ -577,6 +588,10 @@ Footer
 --------------------------------------------------------------*/
 .site-footer a {
 	color: #008497;
+}
+
+.site-footer a:hover {
+	color: #e7642c;
 }
 
 .site-social {
