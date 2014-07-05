@@ -44,7 +44,7 @@
 
 			<div class="medium-6 columns">
 				<nav id="site-navigation" class="main-navigation" role="navigation">
-					<button class="menu-toggle"><?php _e( 'Primary Menu', 'ativista' ); ?></button>
+					<button class="menu-toggle"><?php _e( 'Menu', 'ativista' ); ?></button>
 					<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 				</nav><!-- #site-navigation -->
 			</div>
