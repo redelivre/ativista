@@ -8,6 +8,7 @@
 	<header class="entry-header">
 		<div class="entry-meta">
 			<?php ativista_posted_on(); ?>
+			<?php edit_post_link( __( 'Edit', 'ativista' ), '<span class="edit-link">', '</span>' ); ?>
 		</div><!-- .entry-meta -->
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
@@ -23,6 +24,5 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php edit_post_link( __( 'Edit', 'ativista' ), '<span class="edit-link">', '</span>' ); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->

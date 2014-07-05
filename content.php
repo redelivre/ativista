@@ -9,6 +9,7 @@
 		<?php if ( 'post' == get_post_type() ) : ?>
 		<div class="entry-meta">
 			<?php ativista_posted_on(); ?>
+			<?php edit_post_link( __( 'Edit', 'ativista' ), '<span class="edit-link">', '</span>' ); ?>
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
 		<?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
@@ -31,10 +32,6 @@
 	<?php endif; ?>
 
 	<footer class="entry-footer">
-		<?php if ( ! post_password_required() && ( comments_open() || '0' != get_comments_number() ) ) : ?>
-		<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'ativista' ), __( '1 Comment', 'ativista' ), __( '% Comments', 'ativista' ) ); ?></span>
-		<?php endif; ?>
-
-		<?php edit_post_link( __( 'Edit', 'ativista' ), '<span class="edit-link">', '</span>' ); ?>
+		
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
