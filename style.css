@@ -56,6 +56,7 @@ Colors:
 
 body {
 	background: #fff;
+	color: #444;
 	font-family: Ubuntu, Helvetica, Arial, sans-serif !important;
 }
 
@@ -371,7 +372,7 @@ Basic structure
 Site header
 --------------------------------------------------------------*/
 .site-header {
-	margin-bottom: 2.5em;
+	margin-bottom: 2em;
 }
 
 .site-header .site-title {
@@ -421,14 +422,15 @@ Content
 }
 
 .entry-image-caption {
-	background: #000;
+	background: #222;
 	color: #fff;
-	font-size: 0.75em;
-	font-style: italic;
-	padding: 0.75rem;
+	font-size: 0.65em;
+	font-family: Montserrat, Helvetica, Arial, sans-serif;
+	padding: 1em;
 	position: absolute;
 		bottom: 0;
 		left: 0;
+	text-transform: uppercase;
 }
 
 .post-edit-link {

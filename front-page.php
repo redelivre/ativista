@@ -51,7 +51,7 @@ get_header(); ?>
 										<label>
 										  <input type="text" placeholder="Cidade" />
 										</label>
-										<a href="#" class="button">Registrar</a>
+										<a href="#" class="button expand">Registrar</a>
 								    </form>
 								</div><!-- .mc-form -->
 
