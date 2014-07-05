@@ -21,22 +21,18 @@
 			<div class="medium-6 columns">
 				<div class="site-social">
 					<?php
-					/*
 		            // Social networks & RSS feed
 					$social = get_option( 'campanha_social_networks' );
 					if ( isset( $social ) && ! empty( $social ) ) :
 						foreach ( $social as $key => $value ) :
 							if ( ! empty( $value) ) : ?>
-								<a class="social-link social-link-<?php echo $key; ?>" href="<?php echo esc_url( $value ); ?>"><span class="icon icon-<?php echo $key; ?>"><?php echo $key; ?></span></a>
+								<a class="icon icon-<?php echo $key; ?> social-link social-link-<?php echo $key; ?>" href="<?php echo esc_url( $value ); ?>"><span class="screen-reader-text"><?php echo $key; ?></span></a>
 							<?php
 							endif;
 						endforeach;
 					endif;
-					*/
 					?>
-					<a class="social-link social-link-rss" href="<?php bloginfo( 'rss2_url' ); ?>"><span class="icon icon-rss">Twitter</span></a>
-					<a class="social-link social-link-rss" href="<?php bloginfo( 'rss2_url' ); ?>"><span class="icon icon-rss">Facebook</span></a>
-					<a class="social-link social-link-rss" href="<?php bloginfo( 'rss2_url' ); ?>"><span class="icon icon-rss"><abbr title="Really Simple Syndication">RSS</abbr></span></a>
+					<a class="icon icon-rss social-link social-link-rss" href="<?php bloginfo( 'rss2_url' ); ?>"><span class="screen-reader-text"><abbr title="Really Simple Syndication">RSS</abbr></span></a>
 				</div><!-- .site-social -->
 			</div><!-- .medium-6 .columns -->
 		</div><!-- .row -->

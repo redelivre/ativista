@@ -103,5 +103,6 @@ get_header(); ?>
 		</section><!-- #primary -->
 	</div><!-- .medium-8 .columns -->
 
+
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

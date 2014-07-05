@@ -1,10 +1,10 @@
 /*
 Theme Name: Ativista
-Theme URI: http://underscores.me/
+Theme URI: http://github.com/redelivre/ativista
 Author: Ethymos
 Author URI: http://ethymos.com.br
 Description: Description
-Version: 1.0-wpcom
+Version: 1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: ativista
@@ -20,8 +20,31 @@ Resetting and rebuilding styles have been helped along thanks to the fine work o
 Eric Meyer http://meyerweb.com/eric/tools/css/reset/index.html
 along with Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 and Blueprint http://www.blueprintcss.org/
+
+Colors:
+	Blue: #008497
+	Orange: #e7642c
+	Gray: #efefe4
+	Yellow: #ffd01d
 */
 
+@import url(http://fonts.googleapis.com/css?family=Ubuntu:300,700,300italic);
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+/* ==========================================================================
+   1.0 - Global styles
+   ========================================================================== */
+
+@font-face {
+  font-family: 'ativista';
+  src: url('fonts/ativista.eot?90398535');
+  src: url('fonts/ativista.eot?90398535#iefix') format('embedded-opentype'),
+       url('fonts/ativista.woff?90398535') format('woff'),
+       url('fonts/ativista.ttf?90398535') format('truetype'),
+       url('fonts/ativista.svg?90398535#ativista') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 
 *,
 *:before,
@@ -33,25 +56,103 @@ and Blueprint http://www.blueprintcss.org/
 
 body {
 	background: #fff;
+	font-family: Ubuntu, Helvetica, Arial, sans-serif !important;
 }
 
 a {
-	color: royalblue;
+	color: #e7642c;
 	word-wrap: break-word;
 }
 
 a:visited {
-	color: purple;
+	color: #e7642c;
 }
 a:hover,
 a:focus,
 a:active {
-	color: midnightblue;
+	color: #e7642c;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: Montserrat, Helvetica, Arial, sans-serif !important;
+	text-transform: uppercase;
 }
 
 figure {
 	margin: 0;
 }
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+textarea {
+	background-color: #efefe4;
+	border: 0;
+}
+
+button,
+.button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	background: #008497;
+	border: 0;
+	color: #efefe4;
+	font-family: Montserrat, Helvetica, Arial, sans-serif;
+	padding: 0.5em 0.75em;
+	text-transform: uppercase;
+}
+
+/* Icons */
+[class^="icon-"]:before, [class*=" icon-"]:before {
+	font-family: "ativista";
+	font-style: normal;
+	font-weight: normal;
+	speak: none;
+
+	display: inline-block;
+	text-decoration: inherit;
+	width: 1em;
+	margin-right: .2em;
+	text-align: center;
+	/* opacity: .8; */
+
+	/* For safety - reset parent styles, that can break glyph codes*/
+	font-variant: normal;
+	text-transform: none;
+	 
+	/* fix buttons height, for twitter bootstrap */
+	line-height: 1em;
+
+	/* Animation center compensation - margins should be symmetric */
+	/* remove if not needed */
+	margin-left: .2em;
+
+	/* you can be more comfortable with increased icons size */
+	font-size: 110%;
+}
+ 
+.icon-video:before { content: '\e807'; }
+.icon-image:before { content: '\e803'; }
+.icon-gallery:before { content: '\e802'; }
+.icon-tags:before { content: '\e804'; }
+.icon-folder:before { content: '\e805'; }
+.icon-quote:before { content: '\e801'; }
+.icon-clock:before { content: '\e800'; }
+.icon-link:before { content: '\e808'; }
+.icon-aside:before { content: '\e809'; }
+.icon-audio:before { content: '\e806'; }
+.icon-status:before { content: '\e80A'; }
+.icon-youtube:before { content: '\e80B'; }
+.icon-rss:before { content: '\e80C'; }
+.icon-twitter:before { content: '\e80D'; }
+.icon-facebook:before,
+.icon-facebook-page:before { content: '\e80E'; }
+.icon-google:before { content: '\e80F'; }
+.icon-menu:before { content: '\e810'; }
+.icon-edit:before { content: '\e811'; }
 
 .hidden {
 	position: absolute !important;
@@ -68,8 +169,10 @@ figure {
 .main-navigation {
 	clear: both;
 	display: block;
+	font-family: Montserrat, Helvetica, Arial, sans-serif;
 	float: left;
 	text-align: right;
+	text-transform: uppercase;
 	width: 100%;
 }
 .main-navigation ul {
@@ -87,13 +190,17 @@ figure {
 	position: relative;
 }
 .main-navigation a {
-	background: #eee;
+	background: #ffd01d;
 	display: inline-block;
 	padding: 0.5em;
 	text-decoration: none;
 }
+
+.main-navigation a:hover {
+	background-color: #efefe4;
+}
+
 .main-navigation ul ul {
-	
 	float: left;
 	position: absolute;
 	top: 2.5em;
@@ -260,7 +367,7 @@ Basic structure
 Site header
 --------------------------------------------------------------*/
 .site-header {
-	background: #fbfbfb;
+	
 }
 
 .site-header .site-title {
@@ -295,8 +402,14 @@ Content
 }
 
 .entry-title {
+	color: #008497;
 	font-size: 2em;
-	font-weight: bold;
+}
+
+.entry-meta {
+	font-family: Montserrat, Helvetica, Arial, sans-serif;
+	font-size: 0.875em;
+	text-transform: uppercase;
 }
 
 .entry-image {
@@ -316,17 +429,18 @@ Content
 
 /* Shortcodes */
 .text-box {
-	background: #fbfbfb;
-	border: 1px solid #ddd;
-	padding: 1em;
+	background: #ffd01d;
+	font-size: 1.125em;
+	padding: 1em 1.5em;
 }
 
 .content-button {
-	background: #999;
+	background: #008497;
 	display: inline-block;
-	font-weight: bold;
+	font-family: Montserrat, Helvetica, Arial, sans-serif;
 	margin-top: 1em;
 	padding: 0.5em 0.75em;
+	text-transform: uppercase;
 }
 
 .content-button a {
@@ -345,12 +459,28 @@ Front Page
 9.0 Widgets
 --------------------------------------------------------------*/
 .widget {
+	background-color: #ffd01d;
 	margin: 0 0 1.5em;
+	padding: 1.5em;
+}
+
+.widget-title {
+	font-size: 1.25em;
 }
 
 /* Make sure select elements fit in widgets */
 .widget select {
 	max-width: 100%;
+}
+
+.widget ul {
+	list-style-type: none;
+	
+}
+
+.widget form,
+.widget ul {
+	margin: 0;
 }
 
 
@@ -385,9 +515,13 @@ object {
 12.1 Captions
 --------------------------------------------------------------*/
 .wp-caption {
+	background: #fff;
+	border: 1px solid #efefe4;
 	margin-bottom: 1.5em;
 	max-width: 100%;
+	padding: 0.5em;
 }
+
 .wp-caption img[class*="wp-image-"] {
 	display: block;
 	margin: 0 auto;
@@ -396,7 +530,8 @@ object {
 	text-align: center;
 }
 .wp-caption .wp-caption-text {
-	margin: 0.8075em 0;
+	font-size: 0.875em;
+	margin: 1em 0;
 }
 
 /*--------------------------------------------------------------
@@ -440,8 +575,8 @@ object {
 /*--------------------------------------------------------------
 Footer
 --------------------------------------------------------------*/
-.site-footer {
-	background: #fbfbfb;
+.site-footer a {
+	color: #008497;
 }
 
 .site-social {
