@@ -17,10 +17,17 @@ add_shortcode( 'button', 'ativista_content_button' );
 
 function ativista_share_twitter( $atts, $content = null ) {
 	$a = shortcode_atts( array(
-	    'text' => 'default'
+	    'text' => ''
 	), $atts );
 
-	return '<a href="https://twitter.com/home?status='. get_permalink() . ' " class="content-button content-button-twitter icon-twitter" target="_blank">' . do_shortcode( $content ) . '</a>';
+	if ( ! empty ( $atts['text'] ) ) {
+		$twitter_text = $atts['text'] . ' ' . wp_get_shortlink();
+	}
+	else {
+		$twitter_text = wp_get_shortlink();
+	}
+
+	return '<a href="https://twitter.com/intent/tweet?text='. $twitter_text . ' " class="content-button content-button-twitter icon-twitter" target="_blank">' . do_shortcode( $content ) . '</a>';
 }
 add_shortcode( 'twitter', 'ativista_share_twitter' );
 
