@@ -79,8 +79,18 @@ add_action( 'after_setup_theme', 'ativista_setup' );
  */
 function ativista_widgets_init() {
 	register_sidebar( array(
+		'name'          => __( 'Front Page Widget Area', 'ativista' ),
+		'id'            => 'sidebar-front-page',
+		'description'   => '',
+		'before_widget' => '<div class="large-3 columns"><aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside></div>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
+
+	register_sidebar( array(
 		'name'          => __( 'Sidebar', 'ativista' ),
-		'id'            => 'sidebar-1',
+		'id'            => 'sidebar-general',
 		'description'   => '',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',

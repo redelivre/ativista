@@ -61,6 +61,14 @@ get_header(); ?>
 					</div><!-- .large-5 .large-push-7  .columns -->
 				</div>
 
+				<?php if ( is_active_sidebar( 'sidebar-front-page' ) ) : ?>
+				<div class="row">
+			        <div id="tertiary" class="widget-area widget-area--front-page clearfix" role="complementary">
+			                <?php dynamic_sidebar( 'sidebar-front-page' ); ?>
+			        </div><!-- .widget-area--footer -->
+			    </div><!-- .row -->
+	        <?php endif; ?>
+
 			</main><!-- #main -->
 		</div><!-- #primary -->
 
