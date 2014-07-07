@@ -11,11 +11,24 @@ function ativista_text_box( $atts, $content = null ) {
 add_shortcode( 'box', 'ativista_text_box' );
 
 function ativista_content_button( $atts, $content = null ) {
-	$a = shortcode_atts( array(
-	    'title' => 'My Title',
-	    'foo' => 123,
-	), $atts );
-
 	return '<span class="content-button">' . do_shortcode( $content ) . '</span>';
 }
 add_shortcode( 'button', 'ativista_content_button' );
+
+function ativista_share_twitter( $atts, $content = null ) {
+	$a = shortcode_atts( array(
+	    'text' => 'default'
+	), $atts );
+
+	return '<a href="https://twitter.com/home?status='. get_permalink() . ' " class="content-button content-button-twitter icon-twitter" target="_blank">' . do_shortcode( $content ) . '</a>';
+}
+add_shortcode( 'twitter', 'ativista_share_twitter' );
+
+function ativista_share_facebook( $atts, $content = null ) {
+	$a = shortcode_atts( array(
+	    'text' => 'default'
+	), $atts );
+
+	return '<a href="https://www.facebook.com/sharer/sharer.php?u='. get_permalink() . ' " class="content-button content-button-twitter icon-facebook" target="_blank">' . do_shortcode( $content ) . '</a>';
+}
+add_shortcode( 'facebook', 'ativista_share_facebook' );
