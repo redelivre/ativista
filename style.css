@@ -389,10 +389,10 @@ Content
 --------------------------------------------------------------*/
 
 .site-lead {
-	margin: -1.25em auto 1.25em;
+	margin: -1.25em auto 3.25em;
 }
 
-.home .hentry {
+.home .site-lead .hentry {
 	padding: 1em;
 }
 
@@ -498,6 +498,9 @@ Front Page
 	margin: 0;
 }
 
+.widget-area .entry-image {
+	margin-bottom: 1em;
+}
 
 /*--------------------------------------------------------------
 10.3 Comments
@@ -606,6 +609,10 @@ Footer
 	.site-lead {
 		position: absolute;
 		z-index: 1;
+	}
+
+	.widget-area--front-page .widget {
+
 	}
 
 }
