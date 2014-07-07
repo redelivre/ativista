@@ -392,10 +392,6 @@ Content
 	margin: -1.25em auto 3.25em;
 }
 
-.home .site-lead .hentry {
-	padding: 1em;
-}
-
 .hentry {
 	margin-bottom: 2.5em;
 	position: relative;
@@ -464,6 +460,20 @@ Content
 /*--------------------------------------------------------------
 Front Page
 --------------------------------------------------------------*/
+
+.home .panel {
+	background: #e7642c;
+	border: 0;
+	padding: 1.25em;
+}
+
+.home .panel p {
+	color: #fff;
+	font-size: 1.125em;
+	font-weight: bold;
+	line-height: 1.4;
+}
+
 .mc-form form,
 .mc-form .button {
 	margin-bottom: 0;
