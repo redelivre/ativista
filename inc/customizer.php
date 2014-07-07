@@ -82,6 +82,25 @@ function ativista_customize_register( $wp_customize ) {
         'settings'  => 'ativista_logo',
         'context'   => 'ativista-custom-logo'
     ) ) );
+
+    // Footer section
+    $wp_customize->add_section( 'ativista_footer', array(
+        'title'    => __( 'Footer', 'ativista' ),
+        'priority' => 60,
+    ) );
+    
+    // Footer section: footer text
+    $wp_customize->add_setting( 'ativista_footer_text', array(
+        'default'       => get_option( 'name' ),
+        'capability'    => 'edit_theme_options',
+        'transport'     => 'postMessage'
+    ) );
+
+    $wp_customize->add_control( 'ativista_footer_text', array(
+        'label'    => __( 'Footer Text', 'ativista' ),
+        'section'  => 'ativista_footer',
+        'settings' => 'ativista_footer_text'
+    ) );
 }
 add_action( 'customize_register', 'ativista_customize_register' );
 

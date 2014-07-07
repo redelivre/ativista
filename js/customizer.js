@@ -33,4 +33,10 @@
 			}
 		} );
 	} );
+	// Footer text
+	wp.customize( 'ativista_footer_text', function( value ) {
+		value.bind( function( to ) {
+			$( '.site-info' ).text( to );
+		} );
+	} );
 } )( jQuery );

@@ -14,7 +14,11 @@
 		<div class="row">
 			<div class="medium-6 columns">
 				<div class="site-info">
-					<a class="site-title" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+					<?php 
+					if ( $footer_text = get_theme_mod( 'ativista_footer_text' ) ) {
+						echo get_theme_mod( 'ativista_footer_text' );
+					}
+					?>
 				</div><!-- .site-info -->
 			</div><!-- .medium-6 .columns -->
 			
