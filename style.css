@@ -425,6 +425,10 @@ Content
 	font-size: 2em;
 }
 
+.entry-title a {
+	color: #008497;
+}
+
 .entry-meta {
 	font-family: Montserrat, Helvetica, Arial, sans-serif;
 	font-size: 0.875em;
