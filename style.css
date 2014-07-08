@@ -189,7 +189,7 @@ input[type="submit"] {
 	clear: both;
 	display: block;
 	font-family: Montserrat, Helvetica, Arial, sans-serif;
-	text-align: right;
+	margin-top: 2em;
 	text-transform: uppercase;
 	width: 100%;
 }
@@ -260,7 +260,7 @@ input[type="submit"] {
 @media screen and (max-width: 600px) {
 	.menu-toggle,
 	.main-navigation.toggled .nav-menu {
-		display: block;
+		display: inline-block;
 	}
 
 	.main-navigation ul {
@@ -388,22 +388,12 @@ Basic structure
 	max-width: 1100px;
 }
 
-/* For centering purposes */
-.row--relative {
-	position: relative;
-}
-
-.columns--absolute {
-	position: absolute;
-		bottom: 0;
-		right: 0;
-}
-
 /*--------------------------------------------------------------
 Site header
 --------------------------------------------------------------*/
 .site-header {
 	margin-bottom: 2em;
+	text-align: center;
 }
 
 .site-header .site-title {
@@ -666,6 +656,25 @@ Footer
 
 
 @media only screen and (min-width: 64.063em) {
+
+	/* For centering purposes */
+	.row--relative {
+		position: relative;
+	}
+
+	.columns--absolute {
+		position: absolute;
+			bottom: 0;
+			right: 0;
+	}
+
+	.site-header {
+		text-align: left;
+	}
+
+	.main-navigation {
+		text-align: right;
+	}
 
 	.site-lead {
 		position: absolute;
