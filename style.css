@@ -447,6 +447,13 @@ Content
 	text-transform: uppercase;
 }
 
+.entry-content h2 {
+	border-bottom: 2px solid #e7642c;
+	color: #e7642c;
+	font-size: 1.625em;
+	margin-bottom: 1em;
+}
+
 .post-edit-link {
 	background: #efefe4;
 	font-size: 0.875em;
