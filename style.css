@@ -124,6 +124,9 @@ input[type="submit"] {
 	text-transform: uppercase;
 }
 
+.button {
+	padding: 0.5em;
+}
 /* Icons */
 [class^="icon-"]:before, [class*=" icon-"]:before {
 	font-family: "ativista";
@@ -200,18 +203,24 @@ input[type="submit"] {
 	padding-left: 0;
 }
 
+.main-navigation li {
+	display: inline-block;
+	margin-bottom: 0.25em;
+	position: relative;
+}
+
 .main-navigation .sub-menu {
 	text-align: left;
 }
 
-.main-navigation li {
-	display: inline-block;
-	position: relative;
+.main-navigation .sub-menu li {
+	margin-bottom: 0;
 }
 
 .main-navigation a {
 	background: #ffd01d;
 	display: inline-block;
+	font-size: 0.75em;
 	padding: 0.5em;
 	text-decoration: none;
 }
@@ -654,8 +663,7 @@ Footer
 	text-align: right;
 }
 
-
-@media only screen and (min-width: 64.063em) {
+@media only screen and (min-width: 40.063em) {
 
 	/* For centering purposes */
 	.row--relative {
@@ -668,12 +676,23 @@ Footer
 			right: 0;
 	}
 
+	.main-navigation {
+		text-align: left;
+	}
+}
+
+@media only screen and (min-width: 64.063em) {
+
 	.site-header {
 		text-align: left;
 	}
 
 	.main-navigation {
 		text-align: right;
+	}
+
+	.main-navigation a {
+		font-size: 1em;
 	}
 
 	.site-lead {
