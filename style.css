@@ -646,6 +646,7 @@ Footer
 --------------------------------------------------------------*/
 
 .site-footer {
+	background: #ffd01d;
 	font-size: 0.875em;
 }
 .site-footer a {
@@ -657,12 +658,12 @@ Footer
 }
 
 .site-info {
-
+	margin-bottom: 1em;
 }
 
 .site-social {
 	font-size: 1.125em;
-	text-align: right;
+	text-align: center;
 }
 
 @media only screen and (min-width: 40.063em) {
@@ -680,6 +681,14 @@ Footer
 
 	.main-navigation {
 		text-align: left;
+	}
+	
+	.site-info {
+		margin-bottom: 0;
+	}
+
+	.site-social {
+		text-align: right;
 	}
 }
 

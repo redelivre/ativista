@@ -12,7 +12,7 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="row">
-			<div class="medium-6 columns">
+			<div class="medium-6 large-8 columns">
 				<div class="site-info">
 					<?php 
 					if ( $footer_text = get_theme_mod( 'ativista_footer_text' ) ) {
@@ -22,7 +22,7 @@
 				</div><!-- .site-info -->
 			</div><!-- .medium-6 .columns -->
 			
-			<div class="medium-6 columns">
+			<div class="medium-6 large-4 columns">
 				<div class="site-social">
 					<?php
 		            // Social networks & RSS feed
