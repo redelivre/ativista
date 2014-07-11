@@ -299,9 +299,7 @@ input[type="submit"] {
 	width: 50%;
 }
 
-/*--------------------------------------------------------------
-6.0 Accessibility
---------------------------------------------------------------*/
+
 /* Text meant only for screen readers */
 .screen-reader-text {
 	clip: rect(1px, 1px, 1px, 1px);
@@ -402,6 +400,7 @@ Basic structure
 /*--------------------------------------------------------------
 Site header
 --------------------------------------------------------------*/
+
 .site-header {
 	margin-bottom: 2em;
 	text-align: center;
@@ -481,7 +480,6 @@ Content
 /* Shortcodes */
 .text-box {
 	background: #ffd01d;
-	font-size: 1.125em;
 	padding: 1em 1.5em;
 }
 
@@ -668,6 +666,10 @@ Footer
 
 @media only screen and (min-width: 40.063em) {
 
+	.site-main {
+		min-height: 21.875em;
+	}
+	
 	/* For centering purposes */
 	.row--relative {
 		position: relative;
@@ -681,6 +683,10 @@ Footer
 
 	.main-navigation {
 		text-align: left;
+	}
+
+	.text-box {
+		font-size: 1.125em;
 	}
 	
 	.site-info {
