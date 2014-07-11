@@ -220,6 +220,7 @@ input[type="submit"] {
 .main-navigation a {
 	background: #ffd01d;
 	display: inline-block;
+	color: #008497;
 	font-size: 0.75em;
 	padding: 0.5em;
 	text-decoration: none;
