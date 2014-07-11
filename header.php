@@ -23,8 +23,8 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'ativista' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">
-		<div class="row">
-			<div class="medium-6 columns">
+		<div class="row row--relative">
+			<div class="medium-4 columns">
 				<div class="site-branding">
 					<?php
 				    // Check if there's a custom logo
@@ -42,7 +42,7 @@
 				</div>
 			</div>
 
-			<div class="medium-6 columns">
+			<div class="medium-8 columns columns--absolute">
 				<nav id="site-navigation" class="main-navigation" role="navigation">
 					<button class="menu-toggle"><?php _e( 'Menu', 'ativista' ); ?></button>
 					<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
