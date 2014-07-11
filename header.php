@@ -51,5 +51,5 @@
 		</div><!-- .row -->
 	</header><!-- #masthead -->
 
-	<div id="content" class="site-content<?php if ( is_archive() || is_home() ) : echo ' row'; endif; ?>">
+	<div id="content" class="site-content<?php if ( is_archive() || is_home() || is_page_template( 'page-templates/page-with-sidebar.php') ) : echo ' row'; endif; ?>">
 		
