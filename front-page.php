@@ -36,25 +36,11 @@ get_header(); ?>
 
 							<div class="entry-content">
 								<?php the_content(); ?>
-							      
-						      	<div class="mc-form">
-							        <form>
-										<label>
-										  <input type="text" placeholder="Email" />
-										</label>
-										<label>
-										  <input type="text" placeholder="Telefone" />
-										</label>
-										<label>
-										  <input type="text" placeholder="Bairro" />
-										</label>
-										<label>
-										  <input type="text" placeholder="Cidade" />
-										</label>
-										<a href="#" class="button expand">Registrar</a>
-								    </form>
-								</div><!-- .mc-form -->
-
+<?php
+                                if ( is_active_sidebar( 'sidebar-mcform-front-page' ) ) {
+                                    dynamic_sidebar( 'sidebar-mcform-front-page' );
+                                }
+?>
 							</div><!-- .entry-content -->
 
 						</article><!-- #post-## -->

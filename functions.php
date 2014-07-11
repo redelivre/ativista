@@ -88,6 +88,16 @@ function ativista_widgets_init() {
 		'after_title'   => '</h3>',
 	) );
 
+    register_sidebar( array(
+        'name'          => __( 'Mc Form Widget Area', 'ativista' ),
+        'id'            => 'sidebar-mcform-front-page',
+        'description'   => '',
+        'before_widget' => '<div class="mc-form">',
+        'after_widget'  => '</div><!-- .mc-form -->',
+        'before_title'  => '<h3 class="widget-title">',
+        'after_title'   => '</h3>',
+    ) );
+
 	register_sidebar( array(
 		'name'          => __( 'Sidebar', 'ativista' ),
 		'id'            => 'sidebar-general',
@@ -174,3 +184,5 @@ function ativista_fb_scripts() {
 	<?php
 }
 add_action( 'wp_footer', 'ativista_fb_scripts' );
+
+
