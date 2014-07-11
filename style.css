@@ -124,6 +124,9 @@ input[type="submit"] {
 	text-transform: uppercase;
 }
 
+.button {
+	padding: 0.5em;
+}
 /* Icons */
 [class^="icon-"]:before, [class*=" icon-"]:before {
 	font-family: "ativista";
@@ -170,6 +173,7 @@ input[type="submit"] {
 .icon-facebook:before,
 .icon-facebook-page:before { content: '\e80E'; }
 .icon-google:before { content: '\e80F'; }
+.icon-instagram:before { content: '\e812'; }
 .icon-menu:before { content: '\e810'; }
 .icon-edit:before { content: '\e811'; }
 
@@ -200,18 +204,25 @@ input[type="submit"] {
 	padding-left: 0;
 }
 
+.main-navigation li {
+	display: inline-block;
+	margin-bottom: 0.25em;
+	position: relative;
+}
+
 .main-navigation .sub-menu {
 	text-align: left;
 }
 
-.main-navigation li {
-	display: inline-block;
-	position: relative;
+.main-navigation .sub-menu li {
+	margin-bottom: 0;
 }
 
 .main-navigation a {
 	background: #ffd01d;
 	display: inline-block;
+	color: #008497;
+	font-size: 0.75em;
 	padding: 0.5em;
 	text-decoration: none;
 }
@@ -635,6 +646,7 @@ Footer
 --------------------------------------------------------------*/
 
 .site-footer {
+	background: #ffd01d;
 	font-size: 0.875em;
 }
 .site-footer a {
@@ -646,16 +658,15 @@ Footer
 }
 
 .site-info {
-
+	margin-bottom: 1em;
 }
 
 .site-social {
 	font-size: 1.125em;
-	text-align: right;
+	text-align: center;
 }
 
-
-@media only screen and (min-width: 64.063em) {
+@media only screen and (min-width: 40.063em) {
 
 	/* For centering purposes */
 	.row--relative {
@@ -668,12 +679,31 @@ Footer
 			right: 0;
 	}
 
+	.main-navigation {
+		text-align: left;
+	}
+	
+	.site-info {
+		margin-bottom: 0;
+	}
+
+	.site-social {
+		text-align: right;
+	}
+}
+
+@media only screen and (min-width: 64.063em) {
+
 	.site-header {
 		text-align: left;
 	}
 
 	.main-navigation {
 		text-align: right;
+	}
+
+	.main-navigation a {
+		font-size: 1em;
 	}
 
 	.site-lead {
