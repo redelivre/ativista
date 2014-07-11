@@ -173,6 +173,7 @@ input[type="submit"] {
 .icon-facebook:before,
 .icon-facebook-page:before { content: '\e80E'; }
 .icon-google:before { content: '\e80F'; }
+.icon-instagram:before { content: '\e812'; }
 .icon-menu:before { content: '\e810'; }
 .icon-edit:before { content: '\e811'; }
 

@@ -113,6 +113,12 @@
       "css": "google",
       "code": 59407,
       "src": "entypo"
+    },
+    {
+      "uid": "0fbfb1cd7a847c88ea4c141d0e1bbdb5",
+      "css": "instagram",
+      "code": 59410,
+      "src": "entypo"
     }
   ]
 }
