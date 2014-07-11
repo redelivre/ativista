@@ -20,7 +20,7 @@ get_header(); ?>
 
 				<div class="site-lead">
 			    	<?php if ( has_post_thumbnail() ) : ?>
-			    		<figure class="entry-image">
+			    		<figure class="entry-image show-for-medium-up">
 				     		<?php the_post_thumbnail( 'featured-main' ); ?>
 				    		
 				    		<?php if ( $image_caption = get_post( get_post_thumbnail_id() )->post_excerpt ) : ?>
