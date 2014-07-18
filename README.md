@@ -4,6 +4,11 @@ Um tema WordPress para engajamento político.
 
 Baseado no tema [Underscores](http://underscores.me), **Ativista** usa o esquema de grids e bases tipográficas do *framework* [Foundation](http://foundation.zurb.com/) para rápido desenvolvimento.
 
+## Customizer / Personalizar
+
+**Texto do rodapé**
+```Painel > Aparência > Personalizar > Footer > Footer text``
+
 ## Uso rápido
 
 ### Shortcodes
