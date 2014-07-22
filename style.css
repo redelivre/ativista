@@ -420,7 +420,7 @@ Content
 --------------------------------------------------------------*/
 
 .site-lead {
-	margin: -1.25em auto 3.25em;
+	margin: -1.25em auto 2em;
 }
 
 .hentry {
@@ -446,10 +446,6 @@ Content
 	font-family: Montserrat, Helvetica, Arial, sans-serif;
 	font-size: 0.875em;
 	text-transform: uppercase;
-}
-
-.entry-image {
-	position: relative;
 }
 
 .entry-image-caption {
@@ -502,13 +498,13 @@ Content
 Front Page
 --------------------------------------------------------------*/
 
-.home .panel {
+.site-lead .entry-content {
 	background: #e7642c;
 	border: 0;
 	padding: 1.25em;
 }
 
-.home .panel p {
+.site-lead .entry-content p {
 	color: #fff;
 	font-size: 1.125em;
 	font-weight: bold;
@@ -713,8 +709,23 @@ Footer
 	}
 
 	.site-lead {
+		position: relative;
+	}
+
+	.site-lead .entry-image {
 		position: absolute;
-		z-index: 1;
+	}
+
+	.site-lead .entry-content {
+		background: #e7642c;
+		border: 0;
+		padding: 1.25em;
+		
+		position: absolute;
+			top: 2em;
+			left: 50%;
+		
+		width: 34.375em;
 	}
 
 	.widget-area--front-page .widget {

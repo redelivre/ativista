@@ -28,24 +28,18 @@ get_header(); ?>
 				     		<?php endif; ?>
 			     		</figure>
 			    	<?php endif; ?>
-			    </div>
 
-			    <div class="row">
-				    <div class="large-5 large-push-7 columns">
-						<article id="post-<?php the_ID(); ?>" <?php post_class( 'panel' ); ?>>
-
-							<div class="entry-content">
-								<?php the_content(); ?>
-<?php
-                                if ( is_active_sidebar( 'sidebar-mcform-front-page' ) ) {
-                                    dynamic_sidebar( 'sidebar-mcform-front-page' );
-                                }
-?>
-							</div><!-- .entry-content -->
-
-						</article><!-- #post-## -->
-					</div><!-- .large-5 .large-push-7  .columns -->
-				</div>
+			    	<div class="row">
+				    	<div class="entry-content">
+							<?php the_content(); ?>
+							<?php
+	                        if ( is_active_sidebar( 'sidebar-mcform-front-page' ) ) {
+	                            dynamic_sidebar( 'sidebar-mcform-front-page' );
+	                        }
+							?>
+						</div><!-- .entry-content -->
+					</div>
+			    </div><!-- .site-lead -->
 
 				<?php if ( is_active_sidebar( 'sidebar-front-page' ) ) : ?>
 				<div class="row">

@@ -184,6 +184,15 @@ function ativista_fb_scripts() {
 	  js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&appId=264414477093872&version=v2.0";
 	  fjs.parentNode.insertBefore(js, fjs);
 	}(document, 'script', 'facebook-jssdk'));</script>
+	
+	<script>
+		var siteLeadUrl = "<?php echo get_template_directory_uri() . "/js/site-lead.js" ?>";
+		Modernizr.load({
+	        test: Modernizr.mq("only screen and (min-width:64.063em)"),
+	        yep: siteLeadUrl
+		});
+	</script>
+
 	<?php
 }
 add_action( 'wp_footer', 'ativista_fb_scripts' );
