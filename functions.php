@@ -82,8 +82,8 @@ function ativista_widgets_init() {
 		'name'          => __( 'Front Page Widget Area', 'ativista' ),
 		'id'            => 'sidebar-front-page',
 		'description'   => '',
-		'before_widget' => '<div class="large-3 columns"><aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside></div>',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
 		'before_title'  => '<h3 class="widget-title">',
 		'after_title'   => '</h3>',
 	) );
