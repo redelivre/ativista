@@ -64,13 +64,15 @@ function ativista_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
 
-	// Branding section
+	/*
+     * Branding Section  
+     */
     $wp_customize->add_section( 'ativista_branding', array(
         'title'    => __( 'Branding', 'ativista' ),
         'priority' => 30,
     ) );
     
-    // Branding section: logo uploader
+    // Logo uploader
     $wp_customize->add_setting( 'ativista_logo', array(
         'capability'  => 'edit_theme_options',
         'sanitize_callback' => 'ativista_get_customizer_logo_size'
@@ -83,13 +85,67 @@ function ativista_customize_register( $wp_customize ) {
         'context'   => 'ativista-custom-logo'
     ) ) );
 
-    // Footer section
+    /*
+     * Color Section  
+     */
+    
+    // Link color
+    $wp_customize->add_setting( 'ativista_link_color', array(
+        'default'   => '#e7642c',
+        'transport' => 'postMessage'
+    ) );
+
+    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'ativista_link_color', array(
+        'label'      => __( 'Link Color', 'ativista' ),
+        'section'    => 'colors',
+        'setting'   => 'ativista_link_color'
+    ) ) );
+
+    // Main color
+    $wp_customize->add_setting( 'ativista_main_color', array(
+        'default'   => '#ffd01d',
+        'transport' => 'postMessage'
+    ) );
+
+    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'ativista_main_color', array(
+        'label'      => __( 'Main Color', 'ativista' ),
+        'section'    => 'colors',
+        'setting'   => 'ativista_main_color'
+    ) ) );
+
+    // Secondary color
+    $wp_customize->add_setting( 'ativista_secondary_color', array(
+        'default'   => '#008497',
+        'transport' => 'postMessage'
+    ) );
+
+    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'ativista_secondary_color', array(
+        'label'      => __( 'Secondary Color', 'ativista' ),
+        'section'    => 'colors',
+        'setting'   => 'ativista_secondary_color'
+    ) ) );
+
+    // Featured front page panel color
+    $wp_customize->add_setting( 'ativista_front_page_color', array(
+        'default'   => '#e7642c',
+        'transport' => 'postMessage'
+    ) );
+
+    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'ativista_front_page_color', array(
+        'label'      => __( 'Featured Front Page Color', 'ativista' ),
+        'section'    => 'colors',
+        'setting'   => 'ativista_front_page_color'
+    ) ) );
+
+    /*
+     * Footer Section  
+     */
     $wp_customize->add_section( 'ativista_footer', array(
         'title'    => __( 'Footer', 'ativista' ),
         'priority' => 60,
     ) );
     
-    // Footer section: footer text
+    // Footer text
     $wp_customize->add_setting( 'ativista_footer_text', array(
         'default'       => get_option( 'name' ),
         'capability'    => 'edit_theme_options',
@@ -124,6 +180,75 @@ function ativista_get_customizer_logo_size( $value ) {
 
     return $value;
 }
+
+/**
+ * This will output the custom WordPress settings to the live theme's WP head.
+ * 
+ * Used for inline custom CSS
+ *
+ * @since Ativista 1.0
+ */
+function ativista_customize_css() {
+    ?>
+    <!-- Customizer options -->
+    <style type="text/css">
+        <?php
+        $link_color = get_theme_mod( 'ativista_link_color' );
+        if ( ! empty( $link_color ) ) : ?>
+            .site-content a,
+            .site-content a:visited,
+            .site-content a:hover,
+            .site-content a:active,
+            .site-content a:focus,
+            .site-footer a:hover {
+                color: <?php echo $link_color; ?>
+            }
+        <?php endif; ?>
+
+        <?php
+        $main_color = get_theme_mod( 'ativista_main_color' );
+        if ( ! empty( $main_color ) ) : ?>
+            .main-navigation a,
+            .text-box,
+            .widget,
+            .site-footer {
+                background-color: <?php echo $main_color; ?>
+            }
+        <?php endif; ?>
+
+        <?php
+        $secondary_color = get_theme_mod( 'ativista_secondary_color' );
+        if ( ! empty( $secondary_color ) ) : ?>
+            .main-navigation a,
+            .widget-title,
+            .site-footer a,
+            .entry-title,
+            .entry-title a {
+                color: <?php echo $secondary_color; ?> !important;
+            }
+
+            button,
+            .button,
+            .content-button,
+            input[type="button"],
+            input[type="reset"],
+            input[type="submit"] {
+                background-color: <?php echo $secondary_color; ?>
+            }
+        <?php endif; ?>
+
+        <?php
+        $front_page_color = get_theme_mod( 'ativista_front_page_color' );
+        if ( ! empty( $front_page_color ) ) : ?>
+            .site-lead .entry-content {
+                background-color: <?php echo $front_page_color; ?>
+            }
+        <?php endif; ?>
+    </style> 
+    <!-- / Customizer options -->
+    <?php
+}
+add_action( 'wp_head', 'ativista_customize_css' );
 
 /**
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
