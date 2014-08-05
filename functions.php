@@ -174,14 +174,17 @@ require get_template_directory() . '/inc/jetpack.php';
  *
  * @todo Create an option page (or maybe in Customizer) to insert App ID
  */
-function ativista_fb_scripts() {
+function ativista_fb_comments_box() {
+	
+	$fb_appid = get_theme_mod( 'ativista_facebook_appid' );
 	?>
+
 	<div id="fb-root"></div>
 	<script>(function(d, s, id) {
 	  var js, fjs = d.getElementsByTagName(s)[0];
 	  if (d.getElementById(id)) return;
 	  js = d.createElement(s); js.id = id;
-	  js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&appId=264414477093872&version=v2.0";
+	  js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&appId=<?php echo $fb_appid; ?>&version=v2.0";
 	  fjs.parentNode.insertBefore(js, fjs);
 	}(document, 'script', 'facebook-jssdk'));</script>
 	
@@ -195,6 +198,16 @@ function ativista_fb_scripts() {
 
 	<?php
 }
-add_action( 'wp_footer', 'ativista_fb_scripts' );
+add_action( 'wp_footer', 'ativista_fb_comments_box' );
 
+/**
+ * Add Facebook OpenGraph meta properties
+ */
+function ativista_fb_opengraph() {
+	$fb_appid = get_theme_mod( 'ativista_facebook_appid' );
 
+	if ( ! empty ( $fb_appid ) ) {
+		echo '<meta property="fb:app_id" content="' . $fb_appid . '"/>';
+	}	
+}
+add_action( 'wp_head', 'ativista_fb_opengraph' );

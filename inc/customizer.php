@@ -157,6 +157,41 @@ function ativista_customize_register( $wp_customize ) {
         'section'  => 'ativista_footer',
         'settings' => 'ativista_footer_text'
     ) );
+
+    /*
+     * Facebook Section  
+     */
+    $wp_customize->add_section( 'ativista_facebook', array(
+        'title'    => __( 'Facebook', 'ativista' ),
+        'priority' => 70,
+        'description' => 'É necessário preencher o campo abaixo com o seu <strong>app ID</strong> do Facebook. <a href="https://developers.facebook.com/docs/wordpress/register-facebook-application" target="_blank">Saiba como criar um aplicativo</a> e então insira o seu ID corretamente no campo seguinte.',
+    ) );
+    
+    // Footer text
+    $wp_customize->add_setting( 'ativista_facebook_appid', array(
+        'capability'    => 'edit_theme_options',
+        'sanitize_callback' => 'ativista_sanitize_facebook_appid',
+    ) );
+
+    $wp_customize->add_control( 'ativista_facebook_appid', array(
+        'label'    => _x( 'App ID', 'Facebook App ID', 'ativista' ),
+        'section'  => 'ativista_facebook',
+        'settings' => 'ativista_facebook_appid'
+    ) );
+
+    /**
+     * Sanitize Facebook app ID value
+     * @param  string $value The app ID value
+     * @return string $value The sanitized app ID
+     */
+    function ativista_sanitize_facebook_appid( $value ) {
+        if ( ! empty ( $value ) && is_numeric( $value ) ) {
+            return trim( $value );
+        }
+        else {
+            return '';
+        }
+    }
 }
 add_action( 'customize_register', 'ativista_customize_register' );
 
