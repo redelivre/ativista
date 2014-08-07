@@ -18,11 +18,13 @@ get_header(); ?>
 
 				<?php while ( have_posts() ) : the_post(); ?>
 
-					<?php get_template_part( 'content', 'page' ); ?>
+					<?php get_template_part( 'content', 'page' );
 
+				if( get_theme_mod('quizumba_display_fb_comments') == 1 )
+				{  ?>
 					<div class="fb-comments" data-href="<?php the_permalink(); ?>" data-numposts="5" data-colorscheme="light" data-width="100%"></div>
-
-				<?php endwhile; // end of the loop. ?>
+				<?php }
+				endwhile; // end of the loop. ?>
 
 			</main><!-- #main -->
 		</div><!-- #primary -->
