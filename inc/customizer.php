@@ -180,19 +180,19 @@ function ativista_customize_register( $wp_customize ) {
     ) );
     
     // Comments FB
-    $wp_customize->add_section( 'quizumba_fb_comments', array(
-    		'title'    => __( 'Comentários via Facebook', 'quizumba' ),
+    $wp_customize->add_section( 'ativista_fb_comments', array(
+    		'title'    => __( 'Comentários via Facebook', 'ativista' ),
     		'priority' => 30,
     ) );
-    $wp_customize->add_setting( 'quizumba_display_fb_comments', array(
+    $wp_customize->add_setting( 'ativista_display_fb_comments', array(
     		'capability' => 'edit_theme_options',
     ) );
     
-    $wp_customize->add_control( 'quizumba_display_fb_comments', array(
-    		'label'    => __( 'Exibe a caixa de comentários do Facebook', 'quizumba' ),
-    		'section'  => 'quizumba_fb_comments',
+    $wp_customize->add_control( 'ativista_display_fb_comments', array(
+    		'label'    => __( 'Exibe a caixa de comentários do Facebook', 'ativista' ),
+    		'section'  => 'ativista_fb_comments',
     		'type'     => 'checkbox',
-    		'settings' => 'quizumba_display_fb_comments'
+    		'settings' => 'ativista_display_fb_comments'
     ) );
 
     /**
