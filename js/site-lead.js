@@ -5,9 +5,9 @@ jQuery(document).ready(function() {
 	var fontSize = parseFloat(jQuery("body").css("font-size"));
 	
     // Add the 2em positioning in entry-content on the site-lead total height
-    var contentHeight = jQuery(".site-lead .entry-content").css("height");
+    var contentHeight = jQuery(".site-lead").css("height");
     contentHeight = parseInt(contentHeight, 10) + (fontSize * 2);
-    jQuery(".site-lead").css("height", contentHeight);
+    jQuery(".site-lead").css("height", Math.max(jQuery('.wp-post-image').height(), contentHeight));
 });
 
 jQuery(window).resize(function() {
