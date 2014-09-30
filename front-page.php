@@ -28,7 +28,9 @@ get_header(); ?>
 				     		<?php endif; ?>
 			     		</figure>
 			    	<?php endif; ?>
-
+					<?php
+					if(!empty(get_the_content()) || is_active_sidebar( 'sidebar-mcform-front-page' ) )
+					{?>
 			    	<div class="row">
 				    	<div class="entry-content">
 							<?php the_content(); ?>
@@ -38,7 +40,8 @@ get_header(); ?>
 	                        }
 							?>
 						</div><!-- .entry-content -->
-					</div>
+					</div><?php
+					}?>
 			    </div><!-- .site-lead -->
 
 				<?php if ( is_active_sidebar( 'sidebar-front-page' ) ) : ?>
