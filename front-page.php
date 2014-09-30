@@ -29,11 +29,12 @@ get_header(); ?>
 			     		</figure>
 			    	<?php endif; ?>
 					<?php
-					if(!empty(get_the_content()) || is_active_sidebar( 'sidebar-mcform-front-page' ) )
+					$content = get_the_content(); 
+					if(!empty($content) || is_active_sidebar( 'sidebar-mcform-front-page' ) )
 					{?>
 			    	<div class="row">
 				    	<div class="entry-content">
-							<?php the_content(); ?>
+							<?php echo $content; ?>
 							<?php
 	                        if ( is_active_sidebar( 'sidebar-mcform-front-page' ) ) {
 	                            dynamic_sidebar( 'sidebar-mcform-front-page' );
